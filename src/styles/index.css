@@ -1,6 +1,4 @@
-:root {
-  --mdc-typography-font-family: 'Cantarell';
-}
+@tailwind base;
 
 html {
   font-size: 18px;
@@ -8,12 +6,11 @@ html {
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  /* font-family: Cantarell, sans-serif;*/
+  @apply m-0 p-0 bg-cool-gray-700 text-teal-100;
 }
-* {
-  box-sizing: border-box;
+
+.card {
+  @apply bg-cool-gray-600 rounded shadow;
 }
 
 @tailwind components;

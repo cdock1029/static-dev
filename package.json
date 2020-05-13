@@ -9,21 +9,25 @@
     "start": "next start"
   },
   "dependencies": {
-    "@rmwc/button": "^6.0.14",
     "axios": "^0.19.2",
-    "next": "9.3.6",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.13.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "9.4.0",
     "react": "16.13.1",
+    "react-datocms": "^1.2.4",
     "react-dom": "16.13.1",
     "react-use": "^14.2.0",
-    "rmwc": "^6.1.0"
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.1"
   },
   "devDependencies": {
     "@tailwindcss/ui": "^0.3.0",
-    "@types/node": "^13.13.5",
-    "@types/react": "^16.9.34",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.4",
-    "typescript": "^3.8.3"
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.2"
   },
   "browserslist": [
     "last 1 chrome versions"

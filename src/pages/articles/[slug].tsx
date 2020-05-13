@@ -40,13 +40,3 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
-
-export function reportWebVitals({ id, name, label, value }) {
-  ;(window as any).ga('send', 'event', {
-    eventCategory: `Next.js ${label} metric`,
-    eventAction: name,
-    eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
-    eventLabel: id, // id unique to current page load
-    nonInteraction: true, // avoids affecting bounce rate.
-  })
-}

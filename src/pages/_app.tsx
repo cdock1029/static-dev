@@ -45,7 +45,6 @@ export default function StaticDevApp({ Component, pageProps }) {
 
 export function reportWebVitals({ id, name, label, value }) {
   if (process.env.NODE_ENV === 'production') {
-    console.log('vitals', { id, name, label, value })
     ;(window as any).ga('send', 'event', {
       eventCategory: `Next.js ${label} metric`,
       eventAction: name,

@@ -1,5 +1,3 @@
-import 'isomorphic-unfetch'
-
 const API_URL = 'https://graphql.datocms.com'
 const API_KEY = process.env.DATO_API_KEY
 

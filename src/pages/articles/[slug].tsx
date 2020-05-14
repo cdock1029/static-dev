@@ -2,6 +2,7 @@ import articleStyles from 'styles/article.module.css'
 import { Image } from 'react-datocms'
 import { getAllArticlesWithSlug, getArticle } from 'lib/dato'
 import { markdownToHtml } from 'lib'
+import Date from 'components/date'
 
 export default function Article({ article }: { article: Article }) {
   return article ? (
@@ -9,7 +10,12 @@ export default function Article({ article }: { article: Article }) {
       <div className="py-8">
         <Image data={article.mainImage.responsiveImage} />
       </div>
-      <h1 className="py-8 my-0 text-4xl">{article.title}</h1>
+      <h1 className="py-8 my-0 text-4xl flex flex-col md:flex-row flex-wrap md:justify-between md:items-baseline">
+        <div className="pr-4">{article.title}</div>
+        <small className="pr-4 text-xs opacity-75 text-base">
+          <Date dateString={article.date} />
+        </small>
+      </h1>
       <div
         className={articleStyles.markdown}
         dangerouslySetInnerHTML={{ __html: article.content }}

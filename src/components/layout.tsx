@@ -7,7 +7,7 @@ export function Layout({ children }) {
         <div className="max-w-screen-lg w-full mx-auto px-4">
           <section>
             <Link href="/">
-              <a className="cursor-pointer">Static Dev</a>
+              <a className="cursor-pointer font-bold text-2xl">Static Dev</a>
             </Link>
           </section>
         </div>

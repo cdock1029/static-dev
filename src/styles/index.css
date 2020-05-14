@@ -6,11 +6,29 @@ html {
 
 html,
 body {
-  @apply m-0 p-0 bg-cool-gray-700 text-teal-100;
+  /*@apply m-0 p-0 bg-cool-gray-700 text-teal-100;*/
+  @apply m-0 p-0 bg-black text-teal-200 font-sans;
 }
 
 .card {
-  @apply bg-cool-gray-600 rounded shadow;
+  /*@apply bg-cool-gray-600 rounded shadow;*/
+  @apply bg-cool-gray-900 rounded border border-solid border-gray-700;
+}
+
+.dim img {
+  filter: brightness(60%);
+  transition: filter 0.3s ease-out;
+}
+.dim img:hover {
+  filter: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-serif;
 }
 
 @tailwind components;

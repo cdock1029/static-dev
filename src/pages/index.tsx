@@ -6,7 +6,9 @@ import { getAllArticlesForHome } from 'lib/dato'
 export default function Home({ allArticles }: { allArticles: Article[] }) {
   return (
     <div>
-      <h1 className="text-4xl my-0 py-8">Articles</h1>
+      <h2 className="text-xl uppercase opacity-75 font-semibold font-sans my-0 py-8">
+        Articles
+      </h2>
       <div>
         {allArticles.map((a) => (
           <div key={a.id} className="mb-4 card flex flex-col md:flex-row">
@@ -15,21 +17,22 @@ export default function Home({ allArticles }: { allArticles: Article[] }) {
               style={{ flex: 1 }}
             >
               <Image
+                className="-mx-4 dim -mt-4 rounded-t md:rounded-none md:m-0"
                 data={{
                   ...a.mainImage.responsiveImage,
                 }}
               />
             </div>
             <div className="flex flex-col text-block p-4" style={{ flex: 2 }}>
-              <h2 className="py-4 text-3xl font-semibold flex justify-between items-baseline">
+              <h2 className="py-4 text-3xl font-semibold flex flex-col md:flex-row flex-wrap md:justify-between md:items-baseline">
                 <Link href="/articles/[slug]" as={`/articles/${a.slug}`}>
-                  <a className="underline">{a.title}</a>
+                  <a className="underline pr-4">{a.title}</a>
                 </Link>
-                <small className="px-4 text-xs opacity-75 text-base">
+                <small className="pr-4 text-xs opacity-75 text-base">
                   <Date dateString={a.date} />
                 </small>
               </h2>
-              <p className="py-4 font-serif">{a.excerpt}</p>
+              <p className="py-4">{a.excerpt}</p>
             </div>
           </div>
         ))}

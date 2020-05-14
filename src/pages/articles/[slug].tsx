@@ -8,7 +8,7 @@ export default function Article({ article }: { article: Article }) {
   return article ? (
     <div>
       <div className="py-8">
-        <Image data={article.mainImage.responsiveImage} />
+        <Image className="dim" data={article.mainImage.responsiveImage} />
       </div>
       <h1 className="py-8 my-0 text-4xl flex flex-col md:flex-row flex-wrap md:justify-between md:items-baseline">
         <div className="pr-4">{article.title}</div>

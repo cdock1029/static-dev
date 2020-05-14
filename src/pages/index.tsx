@@ -1,6 +1,7 @@
 import { Image } from 'react-datocms'
 import Link from 'next/link'
 import Date from 'components/date'
+import { getAllArticlesForHome } from 'lib/dato'
 
 export default function Home({ allArticles }: { allArticles: Article[] }) {
   return (

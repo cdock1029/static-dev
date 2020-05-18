@@ -28,7 +28,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply font-serif;
+  @apply font-serif font-bold;
 }
 
 @tailwind components;

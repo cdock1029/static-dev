@@ -11,19 +11,19 @@ export default function Home({ allArticles }: { allArticles: Article[] }) {
       </h2>
       <div>
         {allArticles.map((a) => (
-          <div key={a.id} className="mb-4 card flex flex-col md:flex-row">
+          <div key={a.id} className="mb-6 card flex flex-col md:flex-row">
             <div
-              className="img-block p-4 flex items-center"
+              className="img-block p-6 flex items-center"
               style={{ flex: 1 }}
             >
               <Image
-                className="-mx-4 dim -mt-4 rounded-t md:rounded-none md:m-0"
+                className="-mx-6 dim -mt-6 rounded-t md:rounded-none md:m-0"
                 data={{
                   ...a.mainImage.responsiveImage,
                 }}
               />
             </div>
-            <div className="flex flex-col text-block p-4" style={{ flex: 2 }}>
+            <div className="flex flex-col text-block p-6" style={{ flex: 2 }}>
               <h2 className="py-4 text-3xl font-semibold flex flex-col md:flex-row flex-wrap md:justify-between md:items-baseline">
                 <Link href="/articles/[slug]" as={`/articles/${a.slug}`}>
                   <a className="underline pr-4">{a.title}</a>

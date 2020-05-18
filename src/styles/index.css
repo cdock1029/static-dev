@@ -6,13 +6,14 @@ html {
 
 html,
 body {
-  /*@apply m-0 p-0 bg-cool-gray-700 text-teal-100;*/
   @apply m-0 p-0 bg-black text-teal-200 font-sans;
+}
+body {
+  overflow-y: overlay;
 }
 
 .card {
-  /*@apply bg-cool-gray-600 rounded shadow;*/
-  @apply bg-cool-gray-900 rounded border border-solid border-gray-700;
+  @apply bg-gray-900 rounded border border-solid border-gray-800;
 }
 
 .dim img {
